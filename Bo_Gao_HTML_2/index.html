@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Job Application</title>
+        <style>
+            body {font-family: Arial, sans-serif; margin: 20px;}
+            header, footer { background-color: #f0f0f0; padding: 10px;}
+            nav a {margin: 0 10px}
+            section {margin-top: 20px;}
+            .form-section {background-color: #f9f9f9; padding: 15px; border: 1px solid #ccc; }           
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1>Burger Queen</h1>
+            <nav>
+                <a href="#application">Application Form</a>
+                <a href="#quote">Quote</a>
+                <a href="#ourpartner">Ourpartner</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="application" class="form-section">
+                <article>
+                    <h2>Shift manager job application</h2>
+                    <!--Form starts here-->
+                    <form action="/submit" methon="POST" sutocomplete="on">
+
+                        <label>Full Name:
+                            <input type="text" name="fullname" placeholder="Firstname Lastname" required minlength="2" maxlength="40">                            
+                        </label><br>
+
+                        <label>Email:
+                            <input type="text" name="email" required>
+                        </label><br>
+
+                        <label>Password:
+                            <input type="password" name="password" required>
+                        </label><br>
+
+                        <label>work Experience(years)
+                            <input type="number" name="experience" min="0" max="40">
+                        </label><br>
+
+                        <label>Expected Salary:
+                            <input type="range" name="salary" min="0" max="5000" step="100">
+                        </label><br><br>
+
+                        <label>working method:</label><br>
+                        <input type="checkbox" name="method" value="on-site">On site<br>
+                        <input type="checkbox" name="method" value="remote">remote<br>
+                        <input type="checkbox" name="method" value="hybrid">hybrid<br><br>
+
+                        <label>contract type:</label><br>
+                        <input type="radio" name="contract type" value="Permanent">Permanent<br>
+                        <input type="radio" name="contract type" value="Part-time">Part-time<br><br>
+
+                        <label>shift preference
+                            <select name="shift preference">
+                                <option value="Day">Day</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Night">Night</option>
+                                <option value="Weekend">Weekend</option>
+                            </select>
+                        </label><br><br>
+
+                        <label>Location preference:
+                            <input list="Locations" name="location">
+                            <datalist id="Locations">
+                                <option value="Helsinki">Helsinki</option>
+                                <option value="Espoo">Espoo</option>
+                                <option value="Vantaa">Vantaa</option>    
+                            </datalist>
+                        </label><br><br>
+
+                        <label>more information:<br>
+                            <textarea name="more info" rows="5" cols="50" placeholder="Tell us something about you"></textarea>
+                        </label><br><br>
+
+                        <label>Referral Code (disabled):
+                            <input type="text" value="REFERRAL888" readonly>
+                        </label><br><br>
+
+                        <label>Application ID(readonly):
+                            <input type="text" value="001" readonly>
+                        </label><br><br>
+                        <input type="submit" value="Send this application" aria-label="Submit Application">
+
+
+                    </form>                
+                </article>                
+            </section>
+
+            <aside>
+                <blockquote id="quote"><strong><b>Let's Burger</b></strong></blockquote>
+            </aside>
+
+            <section id="ourpartner">
+                <articale>
+                    <h2>Burger King</h2>
+                    <figure>
+                        <embed src="https://www.youtube.com/embed/9cPxh2DikIA" alt="burger add" with="500" height="200">
+                    </figure>
+                </articale>
+            </section>
+
+
+        </main>
+    </body>
